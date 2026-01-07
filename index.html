@@ -484,7 +484,7 @@
       </div>
     </section>
 
-    <!-- ✅ Process & Meetings (FIXED: mobile numbers balanced) -->
+    <!-- ✅ Process & Meetings (MOBILE OK + DESKTOP FIXED) -->
     <section class="py-24 bg-metal border-y border-brand-navy/10 relative overflow-hidden">
       <div class="absolute inset-0 opacity-5 pointer-events-none"
            style="background-image: radial-gradient(#100030 1.5px, transparent 1.5px); background-size: 24px 24px;">
@@ -498,7 +498,7 @@
           <p class="text-brand-secondary font-medium text-lg">نظام دقيق يضمن الاستمرارية والالتزام بالتنفيذ</p>
         </div>
 
-        <!-- ✅ MOBILE TIMELINE (new) -->
+        <!-- ✅ MOBILE TIMELINE -->
         <div class="md:hidden space-y-6">
           <!-- Item 1 -->
           <div class="flex items-start gap-4">
@@ -596,25 +596,30 @@
           </div>
         </div>
 
-        <!-- ✅ DESKTOP TIMELINE (kept) -->
-        <div class="hidden md:block">
-          <div class="space-y-12 relative">
+        <!-- ✅ DESKTOP TIMELINE (FIXED WITH GRID) -->
+        <div class="hidden md:block relative">
+          <!-- center line -->
+          <div class="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-0.5 bg-gradient-to-b from-transparent via-brand-navy/20 to-transparent z-0"></div>
 
-            <!-- center line -->
-            <div class="absolute top-0 bottom-0 right-1/2 translate-x-1/2 w-0.5 bg-gradient-to-b from-transparent via-brand-navy/20 to-transparent z-0"></div>
+          <!-- make layout direction stable for grid -->
+          <div class="space-y-14 relative z-10" dir="ltr">
 
-            <!-- Step 1 -->
-            <div class="relative flex flex-row items-center justify-between group">
-              <div class="flex-shrink-0 relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-metal-light border-[3px] border-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] md:order-1 translate-x-1/2 transition-transform duration-300 group-hover:scale-110 group-hover:border-brand-main/30">
-                <div class="absolute inset-0 rounded-full border-[2px] border-dashed border-brand-navy/30 animate-[spin_10s_linear_infinite]"></div>
-                <div class="w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center text-white font-english text-lg font-bold shadow-inner relative z-10">1</div>
+            <!-- Step 1 (right side) -->
+            <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-10">
+              <div></div>
+
+              <div class="flex justify-center">
+                <div class="relative flex items-center justify-center w-14 h-14 rounded-full bg-metal-light border-[3px] border-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-110 hover:border-brand-main/30">
+                  <div class="absolute inset-0 rounded-full border-[2px] border-dashed border-brand-navy/30 animate-[spin_10s_linear_infinite]"></div>
+                  <div class="w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center text-white font-english text-lg font-bold shadow-inner relative z-10">1</div>
+                </div>
               </div>
 
-              <div class="w-1/2">
-                <div class="p-8 bg-[#e6e6e6] rounded-2xl shadow-lg border border-white/60 relative overflow-hidden group-hover:-translate-y-1 transition-all duration-300 hover:shadow-xl hover:border-brand-main/40">
-                  <div class="absolute top-0 right-0 w-1.5 h-full bg-brand-navy/10 group-hover:bg-brand-main transition-colors duration-300"></div>
+              <div class="justify-self-end w-full max-w-xl" dir="rtl">
+                <div class="p-8 bg-[#e6e6e6] rounded-2xl shadow-lg border border-white/60 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-brand-main/40">
+                  <div class="absolute top-0 right-0 w-1.5 h-full bg-brand-navy/10"></div>
                   <div class="relative z-10 pr-3">
-                    <h3 class="text-xl font-bold text-brand-navy mb-2 group-hover:text-brand-main transition-colors">إعداد المواضيع + الأجندة الشهرية</h3>
+                    <h3 class="text-xl font-bold text-brand-navy mb-2 transition-colors hover:text-brand-main">إعداد المواضيع + الأجندة الشهرية</h3>
                     <p class="text-brand-secondary text-sm leading-relaxed font-medium">
                       تخطيط دقيق للجلسات وتحديد الـ KPIs والمخرجات المطلوبة قبل كل اجتماع لضمان استثمار الوقت والخروج بقرارات فعالة.
                     </p>
@@ -623,18 +628,13 @@
               </div>
             </div>
 
-            <!-- Step 2 -->
-            <div class="relative flex flex-row-reverse items-center justify-between group">
-              <div class="flex-shrink-0 relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-metal-light border-[3px] border-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] md:order-1 -translate-x-1/2 transition-transform duration-300 group-hover:scale-110 group-hover:border-brand-main/30">
-                <div class="absolute inset-0 rounded-full border-[2px] border-dashed border-brand-navy/30 animate-[spin_10s_linear_infinite]"></div>
-                <div class="w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center text-white font-english text-lg font-bold shadow-inner relative z-10">2</div>
-              </div>
-
-              <div class="w-1/2">
-                <div class="p-8 bg-[#e6e6e6] rounded-2xl shadow-lg border border-white/60 relative overflow-hidden group-hover:-translate-y-1 transition-all duration-300 hover:shadow-xl hover:border-brand-main/40">
-                  <div class="absolute top-0 right-0 w-1.5 h-full bg-brand-navy/10 group-hover:bg-brand-main transition-colors duration-300"></div>
+            <!-- Step 2 (left side) -->
+            <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-10">
+              <div class="justify-self-start w-full max-w-xl" dir="rtl">
+                <div class="p-8 bg-[#e6e6e6] rounded-2xl shadow-lg border border-white/60 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-brand-main/40">
+                  <div class="absolute top-0 right-0 w-1.5 h-full bg-brand-navy/10"></div>
                   <div class="relative z-10 pr-3">
-                    <h3 class="text-xl font-bold text-brand-navy mb-2 group-hover:text-brand-main transition-colors">اجتماعان شهريًا (حضوريًا) في جدة</h3>
+                    <h3 class="text-xl font-bold text-brand-navy mb-2 transition-colors hover:text-brand-main">اجتماعان شهريًا (حضوريًا) في جدة</h3>
                     <ul class="space-y-2 mt-2">
                       <li class="flex items-start gap-2 text-sm text-brand-secondary font-medium">
                         <span class="w-1.5 h-1.5 rounded-full bg-brand-main mt-1.5"></span>
@@ -648,20 +648,33 @@
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Step 3 -->
-            <div class="relative flex flex-row items-center justify-between group">
-              <div class="flex-shrink-0 relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-metal-light border-[3px] border-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] md:order-1 translate-x-1/2 transition-transform duration-300 group-hover:scale-110 group-hover:border-brand-main/30">
-                <div class="absolute inset-0 rounded-full border-[2px] border-dashed border-brand-navy/30 animate-[spin_10s_linear_infinite]"></div>
-                <div class="w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center text-white font-english text-lg font-bold shadow-inner relative z-10">3</div>
+              <div class="flex justify-center">
+                <div class="relative flex items-center justify-center w-14 h-14 rounded-full bg-metal-light border-[3px] border-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-110 hover:border-brand-main/30">
+                  <div class="absolute inset-0 rounded-full border-[2px] border-dashed border-brand-navy/30 animate-[spin_10s_linear_infinite]"></div>
+                  <div class="w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center text-white font-english text-lg font-bold shadow-inner relative z-10">2</div>
+                </div>
               </div>
 
-              <div class="w-1/2">
-                <div class="p-8 bg-[#e6e6e6] rounded-2xl shadow-lg border border-white/60 relative overflow-hidden group-hover:-translate-y-1 transition-all duration-300 hover:shadow-xl hover:border-brand-main/40">
-                  <div class="absolute top-0 right-0 w-1.5 h-full bg-brand-navy/10 group-hover:bg-brand-main transition-colors duration-300"></div>
+              <div></div>
+            </div>
+
+            <!-- Step 3 (right side) -->
+            <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-10">
+              <div></div>
+
+              <div class="flex justify-center">
+                <div class="relative flex items-center justify-center w-14 h-14 rounded-full bg-metal-light border-[3px] border-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-110 hover:border-brand-main/30">
+                  <div class="absolute inset-0 rounded-full border-[2px] border-dashed border-brand-navy/30 animate-[spin_10s_linear_infinite]"></div>
+                  <div class="w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center text-white font-english text-lg font-bold shadow-inner relative z-10">3</div>
+                </div>
+              </div>
+
+              <div class="justify-self-end w-full max-w-xl" dir="rtl">
+                <div class="p-8 bg-[#e6e6e6] rounded-2xl shadow-lg border border-white/60 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-brand-main/40">
+                  <div class="absolute top-0 right-0 w-1.5 h-full bg-brand-navy/10"></div>
                   <div class="relative z-10 pr-3">
-                    <h3 class="text-xl font-bold text-brand-navy mb-2 group-hover:text-brand-main transition-colors">التنسيق والتنبيهات المستمرة</h3>
+                    <h3 class="text-xl font-bold text-brand-navy mb-2 transition-colors hover:text-brand-main">التنسيق والتنبيهات المستمرة</h3>
                     <p class="text-brand-secondary text-sm leading-relaxed font-medium">
                       نظام تنبيهات آلي للمهام والمواعيد، مع تذكير أسبوعي برفع الأرقام والتحديثات لضمان عدم انشغالك بالتفاصيل الإدارية الصغيرة.
                     </p>
@@ -670,24 +683,28 @@
               </div>
             </div>
 
-            <!-- Step 4 -->
-            <div class="relative flex flex-row-reverse items-center justify-between group">
-              <div class="flex-shrink-0 relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-metal-light border-[3px] border-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] md:order-1 -translate-x-1/2 transition-transform duration-300 group-hover:scale-110 group-hover:border-brand-main/30">
-                <div class="absolute inset-0 rounded-full border-[2px] border-dashed border-brand-navy/30 animate-[spin_10s_linear_infinite]"></div>
-                <div class="w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center text-white font-english text-lg font-bold shadow-inner relative z-10">4</div>
-              </div>
-
-              <div class="w-1/2">
-                <div class="p-8 bg-[#e6e6e6] rounded-2xl shadow-lg border border-white/60 relative overflow-hidden group-hover:-translate-y-1 transition-all duration-300 hover:shadow-xl hover:border-brand-main/40">
-                  <div class="absolute top-0 right-0 w-1.5 h-full bg-brand-navy/10 group-hover:bg-brand-main transition-colors duration-300"></div>
+            <!-- Step 4 (left side) -->
+            <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-10">
+              <div class="justify-self-start w-full max-w-xl" dir="rtl">
+                <div class="p-8 bg-[#e6e6e6] rounded-2xl shadow-lg border border-white/60 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-brand-main/40">
+                  <div class="absolute top-0 right-0 w-1.5 h-full bg-brand-navy/10"></div>
                   <div class="relative z-10 pr-3">
-                    <h3 class="text-xl font-bold text-brand-navy mb-2 group-hover:text-brand-main transition-colors">الإشراف والتوجيه في القنوات</h3>
+                    <h3 class="text-xl font-bold text-brand-navy mb-2 transition-colors hover:text-brand-main">الإشراف والتوجيه في القنوات</h3>
                     <p class="text-brand-secondary text-sm leading-relaxed font-medium">
                       قراءة التحديثات الأسبوعية وتوجيه الأعضاء باختصار وتركيز (توجيه عالي التأثير High-Impact Coaching) لتصحيح المسار فوراً.
                     </p>
                   </div>
                 </div>
               </div>
+
+              <div class="flex justify-center">
+                <div class="relative flex items-center justify-center w-14 h-14 rounded-full bg-metal-light border-[3px] border-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-110 hover:border-brand-main/30">
+                  <div class="absolute inset-0 rounded-full border-[2px] border-dashed border-brand-navy/30 animate-[spin_10s_linear_infinite]"></div>
+                  <div class="w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center text-white font-english text-lg font-bold shadow-inner relative z-10">4</div>
+                </div>
+              </div>
+
+              <div></div>
             </div>
 
           </div>
@@ -702,13 +719,11 @@
         <h2 class="text-2xl font-bold mb-8 text-center text-brand-navy">أسئلة شائعة</h2>
 
         <div class="space-y-4">
-
           <div x-data="{ open: false }" class="bg-metal-surface p-4 rounded-sm cursor-pointer shadow-sm" @click="open = !open">
             <div class="flex justify-between items-center font-bold">
               <span>هل يوجد جلسات فردية مكثفة؟</span>
               <i class="ph ph-caret-down transition-transform" :class="open ? 'rotate-180' : ''"></i>
             </div>
-
             <div x-show="open" class="mt-2 text-sm text-brand-secondary leading-relaxed" x-transition>
               التوجيه متاح عند الحاجة، لكن بأسلوب تنفيذي مختصر وعالي التأثير.<br><br>
               البرنامج يعتمد على التوجيه المباشر داخل القنوات والجلسات الشهرية، مع التركيز على القرار والتنفيذ بدل الإكثار من الجلسات الفردية الطويلة.
@@ -720,7 +735,6 @@
               <span>هل البرنامج يناسب كل الشركات؟</span>
               <i class="ph ph-caret-down transition-transform" :class="open ? 'rotate-180' : ''"></i>
             </div>
-
             <div x-show="open" class="mt-2 text-sm text-brand-secondary leading-relaxed" x-transition>
               نعم، يناسب الشركات التي وصلت لمرحلة تحتاج فيها إلى نظام تشغيل واضح بدل الاعتماد على الاجتهاد الفردي.<br><br>
               إذا كان لديك نشاط قائم، فريق يعمل، ورغبة حقيقية في التنظيم والنمو واتخاذ قرارات مبنية على أرقام، فالبرنامج مصمم لك.<br><br>
@@ -733,12 +747,10 @@
               <span>ما المطلوب قبل الانضمام؟</span>
               <i class="ph ph-caret-down transition-transform" :class="open ? 'rotate-180' : ''"></i>
             </div>
-
             <div x-show="open" class="mt-2 text-sm text-brand-secondary" x-transition>
               تعبئة نموذج التقديم أدناه بدقة، وسيتم مراجعته والتواصل معك لتأكيد أهليتك للبرنامج.
             </div>
           </div>
-
         </div>
       </div>
     </section>
